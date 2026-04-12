@@ -155,11 +155,13 @@
                 "text": "Media DB \nrecords"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -256,13 +258,40 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "fa58710c-af87-4d24-a6a9-a9032e5cf72c",
+                  "title": "Media Database Breach",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Attackers gain unauthorized access to the Media Database containing:\n- All video surveillance footage from cameras\n- Extracted facial biometrics and feature vectors\n- Temporal metadata (when and where faces were detected)\n- Associations between faces and pseudonym IDs\n\nSTRIDE Category: Information Disclosure",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -2671,7 +2700,7 @@
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Spoofing",
-                  "description": "The facial recognition system fails to correctly identify individuals.\nSTRIDE Category: Spoofing / Information Disclosure",
+                  "description": "The facial recognition system fails to correctly identify individuals. This could be done by spoofing attacks with crafted images/masks. Flagging innocent visitors as intruders could lead to information disclosure.\nSTRIDE Category: Spoofing / Information Disclosure",
                   "mitigation": "",
                   "modelType": "STRIDE",
                   "new": false,
@@ -2680,7 +2709,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "tampering": 2,
                 "repudiation": 0,
                 "informationDisclosure": 0,
@@ -2827,7 +2856,7 @@
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 1
+                "elevationOfPrivilege": 2
               }
             }
           },
@@ -2955,7 +2984,7 @@
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Information disclosure",
-                  "description": "The Media Linker does not properly validate access control when linking extracted facial biometric data to visitor identities. \nSTRIDE Category: Information Disclosure / Elevation of Privilege",
+                  "description": "The Media Linker does not properly validate access control when linking extracted facial biometric data to visitor identities. An attacker could link biometric data to a different authorized person record.\nSTRIDE Category: Information Disclosure / Elevation of Privilege",
                   "mitigation": "",
                   "modelType": "STRIDE",
                   "new": false,
@@ -2967,7 +2996,7 @@
                 "spoofing": 0,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
@@ -3341,6 +3370,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 4
+    "threatTop": 5
   }
 }
