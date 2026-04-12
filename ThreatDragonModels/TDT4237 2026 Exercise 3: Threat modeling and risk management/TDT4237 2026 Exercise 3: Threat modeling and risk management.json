@@ -2,8 +2,8 @@
   "version": "2.6.0",
   "summary": {
     "title": "TDT4237 2026 Exercise 3: Threat modeling and risk management",
-    "owner": "",
-    "description": "",
+    "owner": "Jonas Hain - Group 103",
+    "description": "A rich oligarch has hired you as an external contractor to help design and secure the Privacy-\nEnhanced Resort and Vacancy Online system that will be used to manage the bookings and logistics\nof a luxury resort on a small, private island in the United States Virgin Islands. The resort is\nfrequently visited by celebrities, politicians, royal family members and other very rich and important\npeople from all over the world. The oligarch wants to guarantee discretion for all of the guests, who\noften register under pseudonyms in the system. Still, it is necessary to keep accurate guest\ninformation in order to manage billing, as well as keeping track of food preferences, personal\nrequests and special room services. Furthermore, it is important to manage surveillance data from\nthe resort premises to detect unwanted intruders. In order to do this, AI-based facial recognition\nshould be used to map people in video recordings with legit guests and staff members in the system.",
     "id": 0
   },
   "detail": {
