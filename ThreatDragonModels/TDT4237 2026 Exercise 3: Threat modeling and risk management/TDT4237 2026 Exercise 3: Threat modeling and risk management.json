@@ -143,7 +143,7 @@
           },
           {
             "position": {
-              "x": 798,
+              "x": 128,
               "y": 380
             },
             "size": {
@@ -267,7 +267,7 @@
           },
           {
             "position": {
-              "x": 338,
+              "x": 778,
               "y": 380
             },
             "size": {
@@ -1379,58 +1379,6 @@
                   "name": "block"
                 },
                 "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Map to Identity",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Map to Identity"
-            ],
-            "id": "bbb23af1-c7cd-45e2-af98-dbaaa936d940",
-            "source": {
-              "cell": "e80ef9e8-a3f7-4973-afd0-42ccb3d78f55",
-              "port": "5236cc12-ee56-4399-a05d-e6cf1dc05429"
-            },
-            "target": {
-              "cell": "8b4f3a27-cbfd-4c0d-8f94-5d128095b0a1",
-              "port": "17667f57-bbae-40b1-96de-2d61f5e1e67d"
-            },
-            "vertices": [
-              {
-                "x": 250,
-                "y": -110
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
                   "name": "block"
                 },
                 "strokeDasharray": null
@@ -1610,12 +1558,8 @@
             },
             "vertices": [
               {
-                "x": 570,
-                "y": 240
-              },
-              {
-                "x": 450,
-                "y": 160
+                "x": 835,
+                "y": 190
               }
             ]
           },
@@ -1819,6 +1763,62 @@
               {
                 "x": 790,
                 "y": -90
+              },
+              {
+                "x": 900,
+                "y": -50
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Map to Identity",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Map to Identity"
+            ],
+            "id": "bbb23af1-c7cd-45e2-af98-dbaaa936d940",
+            "source": {
+              "cell": "e80ef9e8-a3f7-4973-afd0-42ccb3d78f55",
+              "port": "c0e6614b-44da-43d8-8272-5048330da8ee"
+            },
+            "target": {
+              "cell": "8b4f3a27-cbfd-4c0d-8f94-5d128095b0a1",
+              "port": "17667f57-bbae-40b1-96de-2d61f5e1e67d"
+            },
+            "vertices": [
+              {
+                "x": 230,
+                "y": -55
               }
             ]
           },
@@ -1842,7 +1842,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Lookup Mapping",
+              "name": "Store All Faces \nwith Pseudonym \nor as Intruder (SQL)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1856,7 +1856,106 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Lookup Mapping"
+              "Store All Faces \nwith Pseudonym \nor as Intruder (SQL)"
+            ],
+            "id": "36037e6b-a370-4cf5-9423-0fbbe18ed2ff",
+            "source": {
+              "cell": "e80ef9e8-a3f7-4973-afd0-42ccb3d78f55",
+              "port": "c0e6614b-44da-43d8-8272-5048330da8ee"
+            },
+            "target": {
+              "cell": "e1f16fe1-f4ca-4466-9e08-fd9da5b112a7",
+              "port": "0c770d5f-1c38-4754-9394-7ba3af5eeae6"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Manage Booking (SQL)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Manage Booking (SQL)"
+            ],
+            "id": "2f082997-9bb2-44d4-a905-bc37f931f903",
+            "source": {
+              "cell": "defc0e50-de03-4a1f-bf55-d5e30db8dbab",
+              "port": "5236cc12-ee56-4399-a05d-e6cf1dc05429"
+            },
+            "target": {
+              "cell": "df8f246b-056b-41c0-b21d-f6f532f63a8b",
+              "port": "0c770d5f-1c38-4754-9394-7ba3af5eeae6"
+            },
+            "vertices": [
+              {
+                "x": 980,
+                "y": -70
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Pseudonym Mapping",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Pseudonym Mapping"
             ],
             "id": "6d76500e-3005-43e7-bb86-2f264a7b79bf",
             "source": {
@@ -1865,13 +1964,18 @@
             },
             "target": {
               "cell": "8e25e8a1-0d0a-4c9c-b987-093ccf1f5f78",
-              "port": "0c770d5f-1c38-4754-9394-7ba3af5eeae6"
+              "port": "17667f57-bbae-40b1-96de-2d61f5e1e67d"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 590,
+                "y": 60
+              }
+            ]
           },
           {
             "position": {
-              "x": 358,
+              "x": 798,
               "y": 240
             },
             "size": {
@@ -1994,16 +2098,16 @@
           },
           {
             "position": {
-              "x": 1040,
-              "y": 235
+              "x": 1010,
+              "y": 160
             },
             "size": {
-              "width": 80,
-              "height": 90
+              "width": 140,
+              "height": 160
             },
             "attrs": {
               "text": {
-                "text": "Booking\nDB"
+                "text": "Booking\nDB (Pseudonymized)"
               },
               "body": {
                 "stroke": "#333333",
@@ -2099,7 +2203,7 @@
             "zIndex": 13,
             "data": {
               "type": "tm.Process",
-              "name": "Booking\nDB",
+              "name": "Booking\nDB (Pseudonymized)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2114,7 +2218,7 @@
           },
           {
             "position": {
-              "x": 828,
+              "x": 158,
               "y": 250
             },
             "size": {
@@ -2594,12 +2698,12 @@
           },
           {
             "position": {
-              "x": 605,
-              "y": 46
+              "x": 775,
+              "y": -20
             },
             "size": {
               "width": 100,
-              "height": 110
+              "height": 100
             },
             "attrs": {
               "text": {
