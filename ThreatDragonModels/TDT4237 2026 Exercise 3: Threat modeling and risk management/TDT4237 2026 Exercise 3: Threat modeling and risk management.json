@@ -285,13 +285,6 @@
                 "informationDisclosure": 1,
                 "denialOfService": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -308,11 +301,13 @@
                 "text": "Real Identity \nDB"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -409,13 +404,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "09917abf-f026-46c5-b3fd-49cfb2ac9698",
+                  "title": "Real Identity Database Breach",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Attackers compromise the Real Identity Database containing:\n- Actual names, addresses, contact information of all visitors/staff\n- Passport/ID numbers\n- Linkage keys that map pseudonyms back to real identities (violates pseudonymization guarantees)\n- Booking histories and access patterns\n\nSTRIDE Category: Information Disclosure",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -666,8 +681,8 @@
                 "text": "Staff Portal"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -764,9 +779,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "23d9f691-bebc-4cc5-a1dc-d2fc4c579994",
+                  "title": "Unauthorized Access to Staff Portal",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing",
+                  "description": "An attacker gains unauthorized access to the Staff Portal through:\n- Weak authentication or credential compromise (phishing, credential reuse)\n- Session hijacking (stolen JWT tokens from the Identity Service)\n- Lack of multi-factor authentication for staff accounts\n- Privilege escalation within the portal (regular staff → admin)\n- Bypassing the Identity Service validation entirely\n\nSTRIDE Category: Spoofing / Elevation of Privilege",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -913,7 +946,7 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
@@ -967,7 +1000,7 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
@@ -1025,7 +1058,7 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
@@ -1079,7 +1112,7 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
@@ -1110,7 +1143,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1131,13 +1165,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "9cdcfead-5cb7-4a30-bf3a-c4c5f51c0213",
+                  "title": "Unencrypted Video Feed Transmission",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Video surveillance footage transmitted from cameras to the Facial Recognition Engine without encryption:\n- Network sniffer can intercept raw video stream\n- Face data exposed on-the-wire without TLS/encryption\n- No authentication of the data source (man-in-the-middle attacks)\n- Footage timestamps and metadata reveals visitor presence patterns\n\nSTRIDE Category: Information Disclosure",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Video Feed"
@@ -2848,6 +2901,19 @@
                   "new": false,
                   "number": 4,
                   "score": ""
+                },
+                {
+                  "id": "452077fa-421b-4c6a-85a9-3a00ce880e47",
+                  "title": "Denial of Service (DoS)",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "The Identity Resolver processing can be overwhelmed through:\n- Bulk identity resolution requests\n- Complex join queries across multiple databases without optimization\n- Absence of caching mechanisms for repeated queries\n- No request rate limiting or circuit breakers\n- Resource constraints on database connections\n\nSTRIDE Category: Denial of Service",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
@@ -2855,7 +2921,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 0,
+                "denialOfService": 1,
                 "elevationOfPrivilege": 2
               }
             }
@@ -2990,6 +3056,19 @@
                   "new": false,
                   "number": 3,
                   "score": ""
+                },
+                {
+                  "id": "71d88374-ee7e-44ad-aacc-5a3c570a423e",
+                  "title": "Denial of Service (DoS) on Media Linker",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "An attacker overwhelms the Media Linker API to cause service degradation:\n- High-volume face linkage requests (resource exhaustion)\n- Computationally expensive biometric matching operations\n- Lack of rate limiting or request throttling\n- No timeout enforcement on long-running queries\n- Absence of horizontal scaling/load balancing\n\nSTRIDE Category: Denial of Service",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
@@ -2997,7 +3076,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 2,
-                "denialOfService": 0,
+                "denialOfService": 1,
                 "elevationOfPrivilege": 0
               }
             }
@@ -3016,8 +3095,8 @@
                 "text": "Pseudonymize"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3114,12 +3193,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "11f1cefb-7874-4bd2-a607-b59cacbf8765",
+                  "title": "Linkage Key Compromise",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "The linkage keys (pseudonym ↔ real identity mappings) are compromised through:\n- SQL injection in queries: SELECT * FROM linkage_keys WHERE pseudonym_id = <user_input>\n- Insufficient access controls allowing unauthorized queries\n- Lack of encryption for linkage key values in transit or at rest\n- Logging of linkage keys in application/database logs\n- Backup exposure containing unencrypted linkage keys\n\nSTRIDE Category: Information Disclosure / Tampering",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -3136,8 +3237,8 @@
                 "text": "Booking"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3234,12 +3335,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "da39d6dd-9d56-4c90-9743-69789ed0c624",
+                  "title": "Booking Record Tampering",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker modifies booking records through:\n- Direct database manipulation via SQL injection\n- API calls to modify their own or others' bookings without authorization\n- Race conditions in concurrent booking operations (TOCTOU - Time-of-Check-Time-of-Use)\n- Insufficient validation of booking state transitions\n- Missing audit trails for booking modifications\n\nSTRIDE Category: Tampering / Denial of Service",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             },
             "children": [
               "7705ca3a-dfa9-45c6-8f7c-c265dc343019"
@@ -3370,6 +3493,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 5
+    "threatTop": 12
   }
 }
