@@ -1073,7 +1073,7 @@
             "vertices": [
               {
                 "x": 650,
-                "y": -580
+                "y": -560
               }
             ]
           },
@@ -1678,7 +1678,12 @@
               "cell": "14067df8-739e-481e-a65f-f8a581d93c10",
               "port": "0c770d5f-1c38-4754-9394-7ba3af5eeae6"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 439.5,
+                "y": -340
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1729,60 +1734,6 @@
               {
                 "x": 620,
                 "y": -140
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Map to Identity",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "9bdb2c92-a97f-4fc2-9393-c32858362965"
-              ]
-            },
-            "labels": [
-              "Map to Identity"
-            ],
-            "id": "bbb23af1-c7cd-45e2-af98-dbaaa936d940",
-            "source": {
-              "cell": "e80ef9e8-a3f7-4973-afd0-42ccb3d78f55",
-              "port": "c0e6614b-44da-43d8-8272-5048330da8ee"
-            },
-            "target": {
-              "cell": "8b4f3a27-cbfd-4c0d-8f94-5d128095b0a1",
-              "port": "17667f57-bbae-40b1-96de-2d61f5e1e67d"
-            },
-            "vertices": [
-              {
-                "x": 290,
-                "y": -55
               }
             ]
           },
@@ -2138,8 +2089,8 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "77e37c71-6461-4be6-bead-214ebece4301",
-                "bbb23af1-c7cd-45e2-af98-dbaaa936d940",
-                "36037e6b-a370-4cf5-9423-0fbbe18ed2ff"
+                "36037e6b-a370-4cf5-9423-0fbbe18ed2ff",
+                "bbb23af1-c7cd-45e2-af98-dbaaa936d940"
               ],
               "containedElements": [
                 "ed24143a-ffff-4eaf-aba0-d2c713e101e2",
@@ -2163,6 +2114,60 @@
               {
                 "x": 160,
                 "y": -110
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Map to Identity",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "9bdb2c92-a97f-4fc2-9393-c32858362965"
+              ]
+            },
+            "labels": [
+              "Map to Identity"
+            ],
+            "id": "bbb23af1-c7cd-45e2-af98-dbaaa936d940",
+            "source": {
+              "cell": "e80ef9e8-a3f7-4973-afd0-42ccb3d78f55",
+              "port": "c0e6614b-44da-43d8-8272-5048330da8ee"
+            },
+            "target": {
+              "cell": "8b4f3a27-cbfd-4c0d-8f94-5d128095b0a1",
+              "port": "17667f57-bbae-40b1-96de-2d61f5e1e67d"
+            },
+            "vertices": [
+              {
+                "x": 290,
+                "y": -55
               }
             ]
           },
@@ -2543,8 +2548,8 @@
                 "text": "AI-Based \nFacial \nRecognition"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2641,12 +2646,47 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "16ab02b0-5ddd-4286-b6d2-7ebeb767874c",
+                  "title": "Facial Recognition Model Tampering",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "An attacker gains unauthorized access to the facial recognition model and modifies its weights, training data, or inference logic. \nSTRIDE Category: Tampering",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "9c19b974-339a-4c84-bd72-e45f5c41d1da",
+                  "title": "Facial Recognition Misidentification",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing",
+                  "description": "The facial recognition system fails to correctly identify individuals.\nSTRIDE Category: Spoofing / Information Disclosure",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 2,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -2663,8 +2703,8 @@
                 "text": "Identity \nResolver"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2761,12 +2801,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "799ddb22-64b9-429b-a0fe-9aa8b25266c5",
+                  "title": "Over-Privileged Identity Resolver Access",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege",
+                  "description": "The Identity Resolver process has excessive permissions to query all identity mappings and real identity data.\nSTRIDE Category: Elevation of Privilege / Information Disclosure",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -2783,8 +2845,8 @@
                 "text": "Media Linker"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2881,12 +2943,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "a8f80bd1-eae7-492c-8a61-50920649d801",
+                  "title": " Insecure Direct Object Reference (IDOR) in Media Linker",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "The Media Linker does not properly validate access control when linking extracted facial biometric data to visitor identities. \nSTRIDE Category: Information Disclosure / Elevation of Privilege",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -3257,6 +3341,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 4
   }
 }
